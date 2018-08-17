@@ -14,15 +14,16 @@ FoodFinder
 * User can see restaurants in common with friends and recieve restaurant suggestion based on commonality
 
 
-![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/Food'inCommon%20(1).jpeg)
+![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/Food'inCommon.png)
 
 ![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/Login.png)
 
 ![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/map.png)
 
-![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/List.png)
+![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/Restaurant%20show%20page.png)
 
-![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/friend%20page.png)
+![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/Friend%20show%20page.png)
 
 
+![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/profile.png)
 
