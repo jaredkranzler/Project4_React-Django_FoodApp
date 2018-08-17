@@ -11,6 +11,7 @@ FoodFinder
 * User can make favorite list of restaurants
 * User can add restaurants to list and remove
 * User can add personal reviews for individual restaurants on list and rate them.
+* User can see restaurants in common with friends and recieve restaurant suggestion based on commonality
 
 
 ![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/Food%20Finder.jpeg)
