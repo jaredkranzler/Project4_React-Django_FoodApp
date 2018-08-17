@@ -3,13 +3,14 @@ By: Jared Kranzler, Jay Escala, Stephanie Obeytek
 
 #MVP
 * User can login
-* User can see restaurants near by on Map
+* User can see restaurants near by on map
 * User can click a button and be reffered to one specific restaurant around them to go to.
-* User can type search restaurants by catergory
-* User can make favorite list of restaurants
+* User can search restaurants by location, type, and name
+* User can make favorite list of restaurants and give title to list
 * User can add restaurants to list and remove
-* User can add personal reviews for individual restaurants on list and rate them.
-* User can see restaurants in common with friends and recieve restaurant suggestion based on commonality
+* User can see restaurants in common with friends and receive restaurant suggestion based on commonality
+* User can see list of friends
+* User can add friends to friends list
 
 #ERD Diagram
 ![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/Food'inCommon.png)
