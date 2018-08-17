@@ -23,7 +23,7 @@ By: Jared Kranzler, Jay Escala, Stephanie Obeytek
 
 ![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/map.png)
 
-![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/Restaurant%20show%20page.png)
+![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/Restaurant%20page.png)
 
 ![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/Friend%20show%20page.png)
 
