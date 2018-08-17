@@ -13,10 +13,10 @@ By: Jared Kranzler, Jay Escala, Stephanie Obeytek
 * User can add friends to friends list
 
 #ERD Diagram
-![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/ERD.png)
+![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/Food'inCommon%205.05.06%20PM.png)
 
 #Routes
-![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/Restful%20Routes.png)
+![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/routes.png)
 
 #Wireframes
 ![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/Login.png)
