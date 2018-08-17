@@ -1,7 +1,5 @@
-# Project4_React-Django_FoodApp
-
-FoodFinder
-
+# Food'inCommon
+By: Jared Kranzler, Jay Escala, Stephanie Obeytek
 
 #MVP
 * User can login
