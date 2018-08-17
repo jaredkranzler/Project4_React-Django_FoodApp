@@ -11,9 +11,13 @@ By: Jared Kranzler, Jay Escala, Stephanie Obeytek
 * User can add personal reviews for individual restaurants on list and rate them.
 * User can see restaurants in common with friends and recieve restaurant suggestion based on commonality
 
-
+#ERD Diagram
 ![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/Food'inCommon.png)
 
+#Routes
+![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/Restful%20Routes.png)
+
+#Wireframes
 ![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/Login.png)
 
 ![alt text](https://github.com/jaredkranzler/Project4_React-Django_FoodApp/blob/master/Images/map.png)
