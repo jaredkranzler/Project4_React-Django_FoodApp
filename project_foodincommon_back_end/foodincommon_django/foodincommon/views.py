@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from .models import Restaurant, RestaurantList, Friendship
+from .models import Restaurant, RestaurantList
 from django.contrib.auth.models import User
 from rest_framework import generics
 from .serializers import RestaurantSerializer, RestaurantListSerializer, UserSerializer, UserSerializerWithToken
@@ -11,32 +11,31 @@ from .serializers import RestaurantSerializer, RestaurantListSerializer, UserSer
 # TODO finish views 08/16/2018
 
 # Artist API List
-class RestaurantList(generics.ListCreateAPIView):
+class RestaurantListAPI(generics.ListCreateAPIView):
     queryset = Restaurant.objects.all()
     serializer_class = RestaurantSerializer
 
 # Artist API Detail
-class RestaurantDetail(generics.RetrieveUpdateDestroyAPIView):
+class RestaurantDetailAPI(generics.RetrieveUpdateDestroyAPIView):
     queryset = Restaurant.objects.all()
     serializer_class = RestaurantSerializer
 
 # Song API List
-class RestaurantListList(generics.ListCreateAPIView):
+class RestaurantListListAPI(generics.ListCreateAPIView):
     queryset = RestaurantList.objects.all()
     serializer_class = RestaurantListSerializer
 
 # Song API Detail
-class RestaurantListDetail(generics.RetrieveUpdateDestroyAPIView):
+class RestaurantListDetailAPI(generics.RetrieveUpdateDestroyAPIView):
     queryset = RestaurantList.objects.all()
     serializer_class = RestaurantListSerializer
 
-# Artist API List
-class FriendshipList(generics.ListCreateAPIView):
-    queryset = Friendship.objects.all()
-    serializer_class = FriendshipSerializer
-
-# Artist API Detail
-class FriendshipDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Friendship.objects.all()
-    serializer_class = FriendshipSerializer
-
+# # Artist API List
+# class FriendshipList(generics.ListCreateAPIView):
+#     queryset = Friendship.objects.all()
+#     serializer_class = FriendshipSerializer
+#
+# # Artist API Detail
+# class FriendshipDetail(generics.RetrieveUpdateDestroyAPIView):
+#     queryset = Friendship.objects.all()
+#     serializer_class = FriendshipSerializer

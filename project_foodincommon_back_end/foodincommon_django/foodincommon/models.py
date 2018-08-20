@@ -25,6 +25,6 @@ class RestaurantList(models.Model):
     def __str__(self):
         return self.title
 
-class Friendship(models.Model):
-    user_id1 = models.ForeignKey(User, on_delete=models.CASCADE, related_name='friendship')
-    user_id2 = models.ForeignKey(User, on_delete=models.CASCADE, related_name='friendship')
+# class Friendship(models.Model):
+#     user_id1 = models.ForeignKey(User, on_delete=models.CASCADE, related_name='friendship')
+#     user_id2 = models.ForeignKey(User, on_delete=models.CASCADE, related_name='friendship')

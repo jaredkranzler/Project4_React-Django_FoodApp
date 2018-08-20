@@ -14,11 +14,15 @@ class RestaurantListSerializer(serializers.HyperlinkedModelSerializer):
         model = RestaurantList
         fields = ('id', 'title', 'user_id', 'restaurant_id')
 
-class UserSerializer(serializers.ModelSerializer):
+# class FriendshipSerializer(serializers.HyperlinkedModelSerializer):
+#     class Meta:
+#         model = FriendshipSerializer
+#         fields = ('id', 'title', 'user_id', 'restaurant_id')
 
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('username',)
+        fields = ('username')
 
 class UserSerializerWithToken(serializers.ModelSerializer):
 
