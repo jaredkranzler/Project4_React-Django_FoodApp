@@ -11,41 +11,32 @@ from .serializers import RestaurantSerializer, RestaurantListSerializer, UserSer
 # TODO finish views 08/16/2018
 
 # Artist API List
-class ArtistList(generics.ListCreateAPIView):
-    queryset = Artist.objects.all()
-    serializer_class = ArtistSerializer
+class RestaurantList(generics.ListCreateAPIView):
+    queryset = Restaurant.objects.all()
+    serializer_class = RestaurantSerializer
 
 # Artist API Detail
-class ArtistDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Artist.objects.all()
-    serializer_class = ArtistSerializer
+class RestaurantDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Restaurant.objects.all()
+    serializer_class = RestaurantSerializer
 
 # Song API List
-class SongList(generics.ListCreateAPIView):
-    queryset = Song.objects.all().prefetch_related('artist')
-    serializer_class = SongSerializer
+class RestaurantListList(generics.ListCreateAPIView):
+    queryset = RestaurantList.objects.all()
+    serializer_class = RestaurantListSerializer
 
 # Song API Detail
-class SongDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Song.objects.all().prefetch_related('artist')
-    serializer_class = SongSerializer
+class RestaurantListDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = RestaurantList.objects.all()
+    serializer_class = RestaurantListSerializer
 
 # Artist API List
-class ArtistList(generics.ListCreateAPIView):
-    queryset = Artist.objects.all()
-    serializer_class = ArtistSerializer
+class FriendshipList(generics.ListCreateAPIView):
+    queryset = Friendship.objects.all()
+    serializer_class = FriendshipSerializer
 
 # Artist API Detail
-class ArtistDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Artist.objects.all()
-    serializer_class = ArtistSerializer
+class FriendshipDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Friendship.objects.all()
+    serializer_class = FriendshipSerializer
 
-# Song API List
-class SongList(generics.ListCreateAPIView):
-    queryset = Song.objects.all().prefetch_related('artist')
-    serializer_class = SongSerializer
-
-# Song API Detail
-class SongDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Song.objects.all().prefetch_related('artist')
-    serializer_class = SongSerializer

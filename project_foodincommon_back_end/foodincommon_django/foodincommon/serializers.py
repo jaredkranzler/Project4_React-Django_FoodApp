@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from rest_framework_jwt.settings import api_settings
+# from rest_framework_jwt.settings import api_settings
 from .models import Restaurant, RestaurantList
 from django.contrib.auth.models import User
 
@@ -11,8 +11,8 @@ class RestaurantSerializer(serializers.HyperlinkedModelSerializer):
 
 class RestaurantListSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Song
-        fields = ('id', 'title', 'album', 'preview_url')
+        model = RestaurantList
+        fields = ('id', 'title', 'user_id', 'restaurant_id')
 
 class UserSerializer(serializers.ModelSerializer):
 
