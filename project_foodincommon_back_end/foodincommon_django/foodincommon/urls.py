@@ -8,4 +8,5 @@ urlpatterns = [
     path('api/restaurants/<int:pk>', views.RestaurantDetailAPI.as_view(), name='restaurant-detail'),
     path('api/restaurant_lists/', views.RestaurantListListAPI.as_view(), name='restaurant-list-list'),
     path('api/restaurant_lists/<int:pk>', views.RestaurantListDetailAPI.as_view(), name='restaurant-list-detail'),
+    path('api/yelp/businesses/<str:params>/', views.yelp_business_search, name='yelp_business_search'),
 ]

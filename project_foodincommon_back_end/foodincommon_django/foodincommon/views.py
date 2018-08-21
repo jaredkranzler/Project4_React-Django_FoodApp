@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
-
+import requests
+import json
+from django.http import JsonResponse
 from .models import Restaurant, RestaurantList
 from django.contrib.auth.models import User
 from rest_framework import generics
@@ -30,6 +32,33 @@ class RestaurantListDetailAPI(generics.RetrieveUpdateDestroyAPIView):
     queryset = RestaurantList.objects.all()
     serializer_class = RestaurantListSerializer
 
+class YelpBusinessDetailAPI(generics.ListAPIView):
+    queryset = RestaurantList.objects.all()
+    serializer_class = RestaurantListSerializer
+
+def yelp_business_search(request, params):
+    api_key = 'a3x1b8b59MxxH8FUk_vCZNco6_UyvcCPxqBonIz6F7zKie57BtlRFFw7CORC0_BQiAgOeXytSl78DX8DXzvPPGwmWIpeHDYBG8DZjr_54Ln7jUnMOC_4Bcdl0LV1W3Yx'
+    location = params
+    limit = 10
+    url = 'https://api.yelp.com/v3/businesses/search?location={}&client_id={}&limit={}'
+
+    headers = {
+        'Authorization': 'Bearer ' + api_key
+    }
+
+    r = requests.get(url.format(location, api_key, limit), headers=headers)
+    rjson = r.json()
+
+    restaurant_list = []
+
+    for restaurant in rjson['businesses']:
+        restaurant_list.append(restaurant)
+
+    data = {
+        'restaurant_list': restaurant_list
+    }
+
+    return JsonResponse(data)
 # # Artist API List
 # class FriendshipList(generics.ListCreateAPIView):
 #     queryset = Friendship.objects.all()
