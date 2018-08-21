@@ -2,10 +2,10 @@ from django.shortcuts import render, redirect
 import requests
 import json
 from django.http import JsonResponse
-from .models import Restaurant, RestaurantList
+from .models import Restaurant, RestaurantList, Friendship
 from django.contrib.auth.models import User
 from rest_framework import generics
-from .serializers import RestaurantSerializer, RestaurantListSerializer, UserSerializer, UserSerializerWithToken
+from .serializers import RestaurantSerializer, RestaurantListSerializer, UserSerializer, FriendshipSerializer
 # from django.contrib.auth.decorators import login_required
 
 # Create your views here.
@@ -32,8 +32,13 @@ class RestaurantListDetailAPI(generics.RetrieveUpdateDestroyAPIView):
     queryset = RestaurantList.objects.all()
     serializer_class = RestaurantListSerializer
 
-class YelpBusinessDetailAPI(generics.ListAPIView):
-    queryset = RestaurantList.objects.all()
+class FriendshipListAPI(generics.ListCreateAPIView):
+    queryset = Friendship.objects.all()
+    serializer_class = RestaurantListSerializer
+
+# Song API Detail
+class FriendshipDetailAPI(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Friendship.objects.all()
     serializer_class = RestaurantListSerializer
 
 def yelp_business_search(request, location_query, term_query, limit_query):
