@@ -36,17 +36,18 @@ class YelpBusinessDetailAPI(generics.ListAPIView):
     queryset = RestaurantList.objects.all()
     serializer_class = RestaurantListSerializer
 
-def yelp_business_search(request, params):
-    api_key = 'a3x1b8b59MxxH8FUk_vCZNco6_UyvcCPxqBonIz6F7zKie57BtlRFFw7CORC0_BQiAgOeXytSl78DX8DXzvPPGwmWIpeHDYBG8DZjr_54Ln7jUnMOC_4Bcdl0LV1W3Yx'
-    location = params
-    limit = 10
-    url = 'https://api.yelp.com/v3/businesses/search?location={}&client_id={}&limit={}'
+def yelp_business_search(request, location_query, term_query, limit_query):
+    client_id = 'a3x1b8b59MxxH8FUk_vCZNco6_UyvcCPxqBonIz6F7zKie57BtlRFFw7CORC0_BQiAgOeXytSl78DX8DXzvPPGwmWIpeHDYBG8DZjr_54Ln7jUnMOC_4Bcdl0LV1W3Yx'
+    location = location_query
+    term = term_query
+    limit = limit_query
+    url = 'https://api.yelp.com/v3/businesses/search?location={0}&term={1}&limit={2}'
 
     headers = {
-        'Authorization': 'Bearer ' + api_key
+        'Authorization': 'Bearer ' + client_id
     }
 
-    r = requests.get(url.format(location, api_key, limit), headers=headers)
+    r = requests.get(url.format(location, term, limit), headers=headers)
     rjson = r.json()
 
     restaurant_list = []
