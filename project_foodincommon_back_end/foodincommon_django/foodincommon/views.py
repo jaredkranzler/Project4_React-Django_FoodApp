@@ -74,6 +74,19 @@ def yelp_business_search(request, location_query, term_query, limit_query):
     }
 
     return JsonResponse(data)
+
+def ip_address(request):
+    url = 'http://ip-api.com/json'
+
+    r = requests.get(url)
+    ip_address = r.json()
+
+    data = {
+        'ip_address': ip_address
+    }
+
+    return JsonResponse(data)
+
 # # Artist API List
 # class FriendshipList(generics.ListCreateAPIView):
 #     queryset = Friendship.objects.all()
