@@ -75,6 +75,24 @@ def yelp_business_search(request, location_query, term_query, limit_query):
 
     return JsonResponse(data)
 
+def yelp_business_detail(request, id_query):
+    client_id = 'a3x1b8b59MxxH8FUk_vCZNco6_UyvcCPxqBonIz6F7zKie57BtlRFFw7CORC0_BQiAgOeXytSl78DX8DXzvPPGwmWIpeHDYBG8DZjr_54Ln7jUnMOC_4Bcdl0LV1W3Yx'
+    id = id_query
+    url = 'https://api.yelp.com/v3/businesses/{0}'
+
+    headers = {
+        'Authorization': 'Bearer ' + client_id
+    }
+
+    r = requests.get(url.format(id), headers=headers)
+    restaurant = r.json()
+
+    data = {
+        'restaurant': restaurant
+    }
+
+    return JsonResponse(data)
+
 def ip_address(request):
     url = 'http://ip-api.com/json'
 
