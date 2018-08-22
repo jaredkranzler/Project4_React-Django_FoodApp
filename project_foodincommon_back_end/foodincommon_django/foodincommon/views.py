@@ -34,12 +34,21 @@ class RestaurantListDetailAPI(generics.RetrieveUpdateDestroyAPIView):
 
 class FriendshipListAPI(generics.ListCreateAPIView):
     queryset = Friendship.objects.all()
-    serializer_class = RestaurantListSerializer
+    serializer_class = FriendshipSerializer
 
 # Song API Detail
 class FriendshipDetailAPI(generics.RetrieveUpdateDestroyAPIView):
     queryset = Friendship.objects.all()
-    serializer_class = RestaurantListSerializer
+    serializer_class = FriendshipSerializer
+
+class UserListAPI(generics.ListCreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+# Song API Detail
+class UserDetailAPI(generics.RetrieveUpdateDestroyAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
 
 def yelp_business_search(request, location_query, term_query, limit_query):
     client_id = 'a3x1b8b59MxxH8FUk_vCZNco6_UyvcCPxqBonIz6F7zKie57BtlRFFw7CORC0_BQiAgOeXytSl78DX8DXzvPPGwmWIpeHDYBG8DZjr_54Ln7jUnMOC_4Bcdl0LV1W3Yx'

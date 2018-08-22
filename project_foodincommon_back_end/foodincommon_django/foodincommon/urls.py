@@ -2,6 +2,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    path('api/user/', views.FriendshipListAPI.as_view(), name='user-list'),
+    path('api/user/<int:pk>', views.FriendshipDetailAPI.as_view(), name='user-detail'),
     path('api/friendship/', views.FriendshipListAPI.as_view(), name='friendship-list'),
     path('api/friendship/<int:pk>', views.FriendshipDetailAPI.as_view(), name='friendship-detail'),
     path('api/restaurants/', views.RestaurantListAPI.as_view(), name='restaurant-list'),
